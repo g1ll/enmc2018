@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.1)  29 JUL 2018 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.1)  29 JUL 2018 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,14 +717,19 @@ LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
 (Font)              size <5> substituted on input line 46.
 
+
+Overfull \hbox (1.62268pt too wide) in paragraph at lines 46--46
+[] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 57.
 <logo.jpg, id=1, 623.32875pt x 237.88875pt>
 File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
-Package pdftex.def Info: logo.jpg  used on input line 74.
+Package pdftex.def Info: logo.jpg  used on input line 67.
 (pdftex.def)             Requested size: 341.43307pt x 130.3056pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 74.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -739,24 +744,59 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Non-PDF special ignored! <./logo.jpg>]
 
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 75.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 33.16216pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [2]
+<imgs/duplo_t.png, id=18, 722.7pt x 542.025pt>
+File: imgs/duplo_t.png Graphic file (type png)
+<use imgs/duplo_t.png>
+Package pdftex.def Info: imgs/duplo_t.png  used on input line 79.
+(pdftex.def)             Requested size: 273.14923pt x 204.86337pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 33.16216pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-<figura_1.png, id=20, 5022.765pt x 3768.0775pt>
-File: figura_1.png Graphic file (type png)
-<use figura_1.png>
-Package pdftex.def Info: figura_1.png  used on input line 152.
-(pdftex.def)             Requested size: 256.058pt x 190.59976pt.
+[3 <./imgs/duplo_t.png>]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 107.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 107.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 107.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 107.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 111.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 111.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 111.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 111.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -765,47 +805,113 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
+<imgs/4dof/de_sa_h0l0-tmin-4dof.png, id=31, 1527.7075pt x 743.77875pt>
+File: imgs/4dof/de_sa_h0l0-tmin-4dof.png Graphic file (type png)
+<use imgs/4dof/de_sa_h0l0-tmin-4dof.png>
+Package pdftex.def Info: imgs/4dof/de_sa_h0l0-tmin-4dof.png  used on input line
+ 121.
+(pdftex.def)             Requested size: 455.24411pt x 221.63725pt.
+<imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png, id=32, 1511.6475pt x 738.76pt>
+File: imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png Graphic file (type png)
+<use imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png>
+Package pdftex.def Info: imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png  used on input
+ line 129.
+(pdftex.def)             Requested size: 455.24411pt x 222.47514pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 33.16216pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./figura_1.png>]
+[5 <./imgs/4dof/de_sa_h0l0-tmin-4dof.png> <./imgs/4dof/de_sa_h0l0-h1l1-s1h0-4do
+f.png>]
+<imgs/5dof/de_sa_hl_tmin.png, id=40, 1515.6625pt x 739.76375pt>
+File: imgs/5dof/de_sa_hl_tmin.png Graphic file (type png)
+<use imgs/5dof/de_sa_hl_tmin.png>
+Package pdftex.def Info: imgs/5dof/de_sa_hl_tmin.png  used on input line 139.
+(pdftex.def)             Requested size: 455.24411pt x 222.19044pt.
+<imgs/5dof/de_sa_hl_h0l0.png, id=41, 1515.6625pt x 736.7525pt>
+File: imgs/5dof/de_sa_hl_h0l0.png Graphic file (type png)
+<use imgs/5dof/de_sa_hl_h0l0.png>
+Package pdftex.def Info: imgs/5dof/de_sa_hl_h0l0.png  used on input line 149.
+(pdftex.def)             Requested size: 455.24411pt x 221.28601pt.
+<imgs/5dof/de_sa_hl_h2l2.png, id=42, 1593.955pt x 741.77126pt>
+File: imgs/5dof/de_sa_hl_h2l2.png Graphic file (type png)
+<use imgs/5dof/de_sa_hl_h2l2.png>
+Package pdftex.def Info: imgs/5dof/de_sa_hl_h2l2.png  used on input line 159.
+(pdftex.def)             Requested size: 455.24411pt x 211.84842pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 33.16216pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] (./artigoENMC2018.aux)
+[6 <./imgs/5dof/de_sa_hl_tmin.png> <./imgs/5dof/de_sa_hl_h0l0.png>]
+<imgs/5dof/de_sa_hl_h1l1.png, id=48, 1545.775pt x 740.7675pt>
+File: imgs/5dof/de_sa_hl_h1l1.png Graphic file (type png)
+<use imgs/5dof/de_sa_hl_h1l1.png>
+Package pdftex.def Info: imgs/5dof/de_sa_hl_h1l1.png  used on input line 169.
+(pdftex.def)             Requested size: 455.24411pt x 218.16281pt.
+File: imgs/5dof/de_sa_hl_h1l1.png Graphic file (type png)
+<use imgs/5dof/de_sa_hl_h1l1.png>
+Package pdftex.def Info: imgs/5dof/de_sa_hl_h1l1.png  used on input line 180.
+(pdftex.def)             Requested size: 455.24411pt x 218.16281pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 33.16216pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <./imgs/5dof/de_sa_hl_h2l2.png> <./imgs/5dof/de_sa_hl_h1l1.png>]
+(./artigoENMC2018.bbl
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 33.16216pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 33.16216pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9] (./artigoENMC2018.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4865 strings out of 494862
- 63370 string characters out of 6178947
- 136436 words of memory out of 5000000
- 8058 multiletter control sequences out of 15000+600000
- 30620 words of font info for 75 fonts, out of 8000000 for 9000
+ 4945 strings out of 494862
+ 65111 string characters out of 6178947
+ 139228 words of memory out of 5000000
+ 8123 multiletter control sequences out of 15000+600000
+ 31759 words of font info for 79 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
- 41i,14n,43p,998b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,43p,1684b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
-tic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on artigoENMC2018.pdf (6 pages, 517152 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on artigoENMC2018.pdf (9 pages, 1214981 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

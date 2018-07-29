@@ -1,0 +1,100 @@
+\begin{thebibliography}{11}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Bejan(1997)}]{Bejan}
+Bejan, A., 1997.
+\newblock \enquote{Constructal-theory network of conducting path for cooling a
+  heat generating volume.}
+\newblock \emph{Int. J. Heat Mass Transfer}, Vol.~40, pp. 799--816.
+
+\bibitem[{Biserni \emph{et~al.}(2017)Biserni, Dalpiaz, Fagundes and
+  Rocha}]{Biserni2017}
+Biserni, C., Dalpiaz, F.L., Fagundes, T.M. and Rocha, L.A., 2017.
+\newblock \enquote{{Constructal design of T-shaped morphing fins coupled with a
+  trapezoidal basement: A numerical investigation by means of Exhaustive Search
+  and Genetic Algorithm}}.
+\newblock \emph{International Journal of Heat and Mass Transfer}, Vol. 109, pp.
+  73--81.
+\newblock ISSN 00179310.
+
+\bibitem[{Biserni \emph{et~al.}(2004)Biserni, Rocha and Bejan}]{Biserni2004}
+Biserni, C., Rocha, L.A. and Bejan, A., 2004.
+\newblock \enquote{{Inverted fins: Geometric optimization of the intrusion into
+  a conducting wall}}.
+\newblock \emph{International Journal of Heat and Mass Transfer}, Vol.~47, No.
+  12-13, pp. 2577--2586.
+
+\bibitem[{Biserni \emph{et~al.}(2007)Biserni, Rocha, Stanescu and
+  Lorenzini}]{Biserni2007}
+Biserni, C., Rocha, L.A., Stanescu, G. and Lorenzini, E., 2007.
+\newblock \enquote{{Constructal H-shaped cavities according to Bejan's
+  theory}}.
+\newblock \emph{International Journal of Heat and Mass Transfer}, Vol.~50, No.
+  11-12, pp. 2132--2138.
+
+\bibitem[{Gonzales \emph{et~al.}(2015{\natexlab{a}})Gonzales, dos Santos,
+  Isoldi, Estrada and Rocha}]{Gonzales2015b}
+Gonzales, G.V., dos Santos, E.D., Isoldi, L.A., Estrada, E.d.S.D. and Rocha,
+  L.A.O., 2015{\natexlab{a}}.
+\newblock \enquote{{Constructal design of isothermal double-T shaped cavity by
+  means of Simulated Annealing}}.
+\newblock In \emph{Proceedings of the XXXVI Iberian Latin-American Congress on
+  Computational Methods in Engineering - CILAMCE2015}. Rio de Janeiro, Brazil.
+
+\bibitem[{Gonzales \emph{et~al.}(2017)Gonzales, dos Santos, Isoldi, Rocha,
+  Silva~Neto and Telles}]{Gonzales2017}
+Gonzales, G.V., dos Santos, E.D., Isoldi, L.A., Rocha, L.A.O., Silva~Neto, A.J.
+  and Telles, W.R., 2017.
+\newblock \enquote{{Constructal design of double-T shaped cavity with
+  stochastic methods Luus-Jaakola and Simulated Annealing}}.
+\newblock \emph{Defect and Diffusion Forum}, Vol. 370.
+\newblock \doi{10.4028/www.scientific.net/DDF.370.152}.
+
+\bibitem[{Gonzales \emph{et~al.}(2015{\natexlab{b}})Gonzales, Estrada,
+  Emmendorfer, Isoldi, Xie, Rocha and dos Santos}]{Gonzales2015}
+Gonzales, G.V., Estrada, E.D.S.D., Emmendorfer, L.R., Isoldi, L.A., Xie, G.,
+  Rocha, L.A.O. and dos Santos, E.D., 2015{\natexlab{b}}.
+\newblock \enquote{{A comparison of Simulated Annealing schedules for
+  constructal design of complex cavities intruded into conductive walls with
+  internal heat generation}}.
+\newblock \emph{Energy}, Vol.~93.
+\newblock ISSN 03605442.
+
+\bibitem[{Lorenzini \emph{et~al.}(2014)Lorenzini, Biserni, Estrada, Isoldi, dos
+  Santos and Rocha}]{Lorenzini2014}
+Lorenzini, G., Biserni, C., Estrada, E.D., Isoldi, L.A., dos Santos, E.D. and
+  Rocha, L.A.O., 2014.
+\newblock \enquote{{Constructal design of convective Y-shaped cavities by means
+  of Genetic Algorithm}}.
+\newblock \emph{Journal of Heat Transfer}, Vol. 136, No.~7, p. 071702.
+
+\bibitem[{Lorenzini \emph{et~al.}(2012)Lorenzini, Garcia, {Dos Santos}, Biserni
+  and Rocha}]{Lorenzini2012}
+Lorenzini, G., Garcia, F.L., {Dos Santos}, E.D., Biserni, C. and Rocha, L.A.,
+  2012.
+\newblock \enquote{{Constructal design applied to the optimization of complex
+  geometries: T-Y-shaped cavities with two additional lateral intrusions cooled
+  by convection}}.
+\newblock \emph{International Journal of Heat and Mass Transfer}, Vol.~55, No.
+  5-6, pp. 1505--1512.
+
+\bibitem[{Reddy and Gartling(1994)}]{Reddy1994}
+Reddy, J.N. and Gartling, D.K., 1994.
+\newblock \emph{The Finite Element Method in Heat Transfer and Fluid Dynamics}.
+\newblock McGrawHill, New York.
+
+\bibitem[{Xie \emph{et~al.}(2010)Xie, Chen and Sun}]{Xie2010}
+Xie, Z., Chen, L. and Sun, F., 2010.
+\newblock \enquote{{Geometry optimization of T-shaped cavities according to
+  constructal theory}}.
+\newblock \emph{Mathematical and Computer Modelling}, Vol.~52, No. 9-10, pp.
+  1538--1546.
+
+\end{thebibliography}

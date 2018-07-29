@@ -3,7 +3,7 @@
 \usepackage{natbib}
 \usepackage{fancyhdr}
 \usepackage{color}
-\usepackage{wallpaper} 
+\usepackage{wallpaper}
 \usepackage{titlesec}   %% Define space between paragraph e section
 \usepackage{float} 	%% Use to fix Figure or Table: ex: \begin{table}[H]
 %%%%Don't edit this block. It reduces the spacing between the lines of the references
@@ -15,13 +15,13 @@
 
 %%-----------------------------------------------EDIT----------------------------------------------
 \author
-    {\rm \begin{tabular}{l} 
-    \textbf{Gill Velleda Gonzales}$^{1}$ - {\textnormal gillgonzales@ifsul.edu.br}\\%
-    \textbf{Second Author}$^{2}$ - {\textnormal e-mail}\\
-    \textbf{Third Author}$^{3}$ - {\textnormal e-mail}\\
-    {\fontsize{11}{0}\selectfont $^{1}$Universidade do Estado do Rio de Janeiro, Instituto Politécnico - Nova Friburgo, RJ, Brazil}\vspace*{-0.05cm} \\
-    {\fontsize{11}{0}\selectfont $^{2}$Institut Polytechnique de Grenoble - Grenoble, France}\vspace*{-0.05cm}\\
-    {\fontsize{11}{0}\selectfont $^{3}$Universidade Estadual de Santa Cruz, Campus Soane Nazaré de Andrade - Ilhéus, BA, Brazil}
+    {\rm \begin{tabular}{l}
+    \textbf{Gill Velleda Gonzales}$^{1,2}$ - {\textnormal gillgonzales@ifsul.edu.br}\\%
+    \textbf{Elizaldo Domingues dos Santos}$^{2}$ - {\textnormal elizaldodossantos@gmail.com}\\
+    \textbf{Antônio J. Silva Neto}$^{3}$ - {\textnormal ajsneto@iprj.uerj.br}\\
+    {\fontsize{11}{0}\selectfont $^{1}$Instituto Federal Sul-Rio-Grandense - Campus Santana do Livramento, RS, Brazil}\vspace*{-0.05cm} \\
+    {\fontsize{11}{0}\selectfont $^{2}$Universidade Federal do Rio Grande - PPG em Modelagem Computacional, Rio Grande, RS, Brazil}\vspace*{-0.05cm}\\
+    {\fontsize{11}{0}\selectfont $^{3}$Universidade do Estado do Rio de Janeiro, Instituto Politécnico - Nova Friburgo, RJ, Brazil}
   \end{tabular}}
 %%----------------------------------------------------------------------------------------------
 
@@ -55,151 +55,147 @@
 \rhead{}
 
 \begin{abstract}
-This document-template provides detailed instructions for preparing and submitting a paper to XXI ENMC - National Meeting on Computational Modeling and IX ECTM -Meeting on Materials Science and Technology. Please follow these instructions: a) type the body of the paper in a single column; b) use 5 to 10 A4-size pages (21cm $\times$ 29.7cm), each formatted with 2.5cm margins on all sides except at the top of the page (do not print any border around the text and do not insert page numbers); c) use 12 pt Times New Roman throughout, except on affiliation identification; d) type up to 200 words in the abstract, in italics; e) always use single-spaced lines, justified alignment; f) cite references by name (year) and list in alphabetical order by author last name at the end; g) supply good quality figures/photographs (black and white only); h) define all symbols as they appear in the text; i) use only SI units. The paper may be written in English, Portuguese or Spanish.
+In this paper, it is analyzed the application of two meta-heuristic methods, Differential Evolution and Simulated Annealing, for the geometric optimization in a heat transfer problem. The optimization problem is defined by the Constructal Design method, that determines the objective and constraints in the optimization process, as well as, the degrees of freedom of the geometry that is optimized. The main purpose of this work is the comparison between the results of this two meta-heuristics, mainly the reproduction of the degrees of freedom effect over the optimal geometry, and the thermal performance of the computational domain. The experiment consists in performing thirty runs of each algorithm, with different values for the configuration parameters, and also four versions of Differential Evolution and five versions of Simulated Annealing. The optimization results for four degrees of freedom show that the meta-heuristic algorithm and its parameter configuration can lead to the wrong interpretation of the effect of degrees of freedom over optimal geometry. It is possible to conclude that the algorithm of Differential Evolution with a specific parameter configuration achieved the best and most robust results than the others algorithm. Therefore, the significant contribution here is the recommendation of the more reliable meta-heuristic, and its correct parameters for the heat transfer problem considered.
 \end{abstract}
 
-\keywords{\em{First keyword, Second keyword, Third keyword (up to 5 keywords) }}
+\keywords{\em{Heat Transfer, Constructal Design, Simulated Annealing, Differential Evolution, Geometric Optimization }}
 
 \pagestyle{fancy}
 
-\section{INTRODUCTION [Times New Roman 12pt, all capital letters, bold]}
-The Proceedings of XXI ENMC/IX ECTM, including the full versions of all papers to be presented at the meeting, will be published in digital media. Therefore, it is extremely important that you prepare the PDF digital version of your contribution in accordance with the present instructions. The file size must be less than 4 MB.
+\section{INTRODUCTION}
+The geometric optimization of cooling cavities inside a solid with heat generation was first proposed by \cite{Biserni2004}. Through by the Constructal Design (CD) method, the elementary geometry of C-shaped and T-shaped cavities was evaluated. The CD method is based on the Constructal Theory. According to its author, \citep{Bejan}, there is a physical principle that defines the geometries in flow systems, and this principle determines the shapes and structures that emerge in nature. The Constructal Law explains that for a finite-size flow system to persist in time (to survive) its configuration must evolve in such a way that it provides easier access to the currents that flow through it \citep{Bejan}. The CD method is not an optimization method, and determines the degrees of freedom which varies in the geometric optimization process and depends on the constraints to which this optimization is submitted to. The optimization is performed by an optimization method, e.g., Exhaustive Search (ES).
 
-The Editorial Committee will evaluate all submitted papers.
+Employing the CD method to determine the objectives and constraints of the optimization process, more complex cavities have been evaluated \citep{Biserni2007}. Comparing the results between different shapes of cavities, kept the same constraints, it is noted that a more complex cavity geometry leads to the gain in the thermal performance, as can be seen in the complex and multi-cavity studies \citep{Lorenzini2012,Xie2010}. However, complex cavities need more degrees of freedom and require more computational effort in the optimization process. Therefore, for complex cavities, meta-heuristic methods are used as alternative methods to ES. \cite{Lorenzini2014} use Genetic Algorithm (GA) to evaluate the more complex problem in the Y-shaped cavity optimization including a convective parameter. The GA also was performed with CD to the optimization and analyses of morphing fins coupled with a heat generating body in \cite{Biserni2017}. \cite{Gonzales2015} analyses the performance of different parameters of Simulated Annealing (SA) algorithm in the geometric optimization of a Y-shaped cavity. The work of \cite{Gonzales2015} compares various parameters of the Cooling Schedule (CS) and proposes a hybrid parameter that showed best results than GA for a Y-shaped cavity. In the paper of \cite{Gonzales2017}, was performed a comparison between the Luus-Jaakola and SA algorithms with hybrid parameters of CS applied in the Double-T shaped cavity optimization. The results showed the best performance of the SA algorithm configured with the hybrid parameter of Cooling Schedule.
 
-\section{TYPING INSTRUCTIONS}
-The paper must be written in English, Portuguese or Spanish. {\it If written in Portuguese or Spanish, a translation of title, abstract and keywords into English must be provided at the end of the paper (after the reference list)}.
+In the present work, the meta-heuristic of SA is compared with the Differential Evolution (DE) algorithm, applied jointly with CD, to the geometric optimization of the Double-T shaped cavity. The Double-T Shaped cavity was first proposed by \cite{Gonzales2015b}, and the SA was used in the geometric optimization. The two algorithms are performed with distinct parameters, and then the comparison is made between the variations of SA and DE. The best versions for each meta-heuristic are then compared. The SA variations differ in the Cooling Schedule (CS) parameter, and five distinct CS are performed. Different versions of the DE algorithm are compared too. The DE variations differ in the crossover and mutation operators, and four DE algorithms are performed. The double-T shaped cavity has five degrees of freedom (DOFs) that define the cavity geometry ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$). Four and five DOFs are optimized, and each algorithm achieves the curve of the effect of DOF over optimal geometry and thermal performance. The results for each algorithm are registered in a database and analyzed. Therefore, the comparison between the results of the algorithms is performed through the effect of DOF over optimal geometry, not just the minimum temperature.  Then, the better algorithm is the one that reproduces this effect with more reliable results.
 
-% \ \ \ \
-\newpage %
-\subsection{Paper length}
-The full paper including figures and tables must have at least 5 pages, but is limited to 10 A4-size pages (21 cm x 29.7 cm). Please limit your paper by writing concisely, rather than by reducing figures or tables to a size at which symbols/labels become difficult to read.
+\section{MATHEMATICAL AND NUMERICAL MODEL}
 
-\subsection{Page format}
-Each A4-size page should be formatted with 2.5 cm margins on all sides, except at the top. This defines the printable area. Inside this area, the text must be arranged in a single column. Please do not print any border around the text and do not insert page numbers.
 
-The final paper should look like this document.
+Figure \ref{figure01} shows the heat transfer problem of interest, that consists in a conducting body in the two-dimensional configuration, with the third dimension, with length $W$, perpendicular to the plane of the figure. The solid domain has a constant and uniform internal heat generation with the volumetric rate given by $q^{'''}(Wm^{\tiny -3})$. The solid has a constant thermal conductivity k. The outer surfaces of the solid are perfectly insulated, corresponding to adiabatic conditions. In this case, the heat can only be removed through the double-T shaped cavity, which is kept at a minimum temperature $(\theta_{min})$. The minimal temperature of the cavity may be kept with the flow of refrigerant fluid through the cavity, changing phase at a low temperature. For the sake of simplicity, the heat transfer coefficient on the cavity wall is assumed to be sufficiently large so that the convective resistance can be neglected in comparison to the solid conduction resistance.
 
-\subsection{General text specifications}
-
-The paper must be typed using 12 pt Times New Roman throughout the text, as in the present document. This includes title, headings, and figure and table captions.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Paper title.}} The title should be in boldface type, all capital letters and centered on the page and must not exceed three lines. It should be single spaced if longer than one line. Skip one line (12 pt) between the title and the first author.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Author(s) and affiliation.}} Type authors names in boldface type, flush left, one per line, including first name, middle and last name, followed by the e-mail address (not boldfaced). After the name put in superscript the number, related to the affiliation. The authors names should be followed by the corresponding affiliation, which should be in regular type (neither boldfaced nor italicized). After presenting affiliations should skip two lines (24 pt) between the last affiliation and the abstract.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Abstract and keywords.}} Type the heading \textbf{\textit{Abstract.}} in boldface italics, flush left, followed by a period. On the same line, type the abstract in italics, justified alignment. The abstract should be no longer than 200 words. Skip one line, then type the heading \textbf{\textit{Keywords:}} (don't forget the colon) in boldface italics, flush left and type 3 to 5 keywords, separated by commas, with only the first letter of each keyword capitalized. Skip two lines (24 pt) between the keywords and the body of text.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Headings.}} Type a first-level head (section) in all capital letters, boldface type, flush left. Begin by typing the Arabic number followed by a period, then type the head title 0.75 cm (or 7 blank spaces) from the left margin. Leave one blank line above and one below this head. 
-
-For a second-level head (subsection), capitalize only the first letter, using boldface type, flush left. Begin by typing the double number, then type the sub-head title 0.75 cm from the left margin. Leave one blank line above and one below this head. 
-
-Do not number third-level heads (sub-subsection). Use boldface italics, capitalizing only the first letter and indenting 0.75 cm from the left margin. Follow it by a period and start the text immediately. Leave one blank line above this head.
-
-\vspace{0.5cm} % Example spaces
-% 
-\textbf{\textit{Body of text.}} The text should be typed using single-spaced lines and justified alignment. Start each paragraph 0.75 cm from the left margin and allow no space between paragraphs.
-
-\subsection{Equations, symbols and units}
-Indent an equation 1 cm (or 10 spaces) from the left margin. Number it with an Arabic number enclosed in parentheses, placed flush right. Allow one blank line above and one below each equation. For example:
-\begin{equation}
-\vec{q}_{r}=-4\pi r^{2}k\frac{dT}{dr}
-\label{eq1}
-\end{equation}
-%%%here space
-
-When referring to an equation in the text write Eq. (1), except at the beginning of a sentence, where Equation (1) should be used. 
-
-Symbols should be italicized throughout the text. Define all symbols as they appear in the text. A nomenclature section is not necessary.
-
-All data, including those shown in tables and figures, must be reported in SI units. 
-
-\subsection{Figures and tables}
-Figures and tables should be inserted as close as possible to their mention in the text. Enclosed text and symbols must be clearly readable; avoid small symbols. Supply good quality pictures and illustrations.
-
-Figures and tables and their captions should be centered in the text. Place figure caption below the figure, leaving one blank line between them. Place table title above the table, also leaving one blank line between them. Leave one blank line between the table or figure and the adjacent text. Color figures can be used.
-
-Number figures and tables consecutively using Arabic numerals (e.g., Figure 1, Figure 2, Table 1, Table 2). Refer to them in the text as Table 1 and Fig. 1 (except at the beginning of a sentence, where Figure 1 should be used).
-% TABLE EXAMPLE
-\begin{table}[H] % !htbp 
-\caption{Input parameters}
-\vspace{12pt}
-\centering{}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc|cc}        % {0.8\textwidth}
-\hline 
-Method LJ & Configuration && Method R2W & Configuration\tabularnewline
-\hline 
-$k_1$ (W/mK)  & $[0,0; 0,1]$ && $k_1$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
-\hline 
-$k_2$ (W/mK) & $[0,0; 0,1]$ && $k_2$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
-\hline 
-$n$ & $1,0$ && $n$ & $1,0$\tabularnewline
-\hline 
-\end{tabular*}
-\end{table}
-
-\begin{figure}[!htbp] %h or !htbp
-\vspace{-2pt}
-\begin{center}
-\includegraphics[height=6.7cm,width=9cm]{figura_1}%
-\caption{Gibbs free energy variations: simulated results.}
-\label{fig1}%
-\end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{imgs/duplo_t.png}
+\caption{ {\small Computational domain of Double-T shaped cavity.}}
+\label{figure01}
 \end{figure}
 
-Label coordinates in plots and add the corresponding units. Similarly, label columns/rows in tables and add the units.
+The objective of the analysis is to determine the optimal geometry ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) that is characterized by the minimum global thermal resistance $(\theta_{max} - \theta_{min})/(q^{'''}A)$. According to the CD this optimization can be subjected to the constraints of the total area and cavity area, represented respectively by:
 
-\subsection{Permission}
-You are responsible for making sure that you have the right to publish everything in your paper. If you use material from a copyrighted source, you may need to obtain permission from the copyright holder.
+\begin{equation}
+A = HL \label{area_total}
+\end{equation}
+\begin{equation}
+A_{c} = A_{0} + 2A_{1} + 2A_{2} \label{area_cavidade}
+\end{equation}
+The fraction of the cavity area with respect to the total area is given by:
+\begin{equation}
+\phi_{c} = A_{c}/A \label{fi}
+\end{equation}
+For the determination of the temperature field in the solid domain, it is necessary to solve the heat conduction equation given by:
+\begin{equation}
+\frac{\partial^{2} \theta}{\partial \tilde{x}^{2}}+\frac{\partial^{2} \theta}{\partial \tilde{y}^{2}}+1=0\label{calor}
+\end{equation}
 
-\section{CALL TO REFERENCES IN THE BODY OF TEXT}
-References should be cited in the text by name last (year) or (last name, year). For example: ``In a recent work, Jones et al. (2005) proposed ...,'' or ``In a recent work (Devlou \& Zaparolli, 2013), it is suggested ... .''
+For the sake of brevity, the equations with dimensionless variables, the equations of boundary conditions of null flux in the solid outer surfaces, as well as, the equations of boundary conditions of minimal temperature in the cavity wall can be seen in the study by \cite{Gonzales2015b}, and are not reproduced here. The aim is to minimize the maximal excess temperature represented by the following equation:
 
-References must be listed in alphabetical order at the end of the paper. Type the word \textbf{REFERENCES} in all capitals, boldface type from the left margin, skip one line and type the reference list. In each reference, indent all lines 0.75 cm except the first line, which starts directly at the left margin. Each reference must be cited in the text. In the section REFERENCES is presented an example of a reference list including a journal article, a report, an edited book, proceedings, a dissertation and a book.
+\begin{equation}
+\tilde{\theta}_{max}=\frac{\theta_{max}-\theta_{min}}{q^{'''}\cdot\frac{A}{k}}\label{fo}
+\end{equation}
+
+The determination of $\tilde{\theta}_{max}$ is needed to optimize the five degrees of freedom ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) submitted to the corresponding constraints of the cavity area ($\phi_{c}$, $\phi_{1}$ and $\phi_{2}$) and the total solid area. In this paper are optimized the five DOFs ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$). The function represented by Eq. (\ref{fo}) is determined numerically by solving Eq. (\ref{calor}) for the temperature field in every assumed configuration ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$), and calculating $\tilde{\theta}_{max}$ to see whether its value may be minimized by varying the configuration. The numerical solution is performed with the Finite Element Method (FEM)\citep{Reddy1994}, based on linear triangular elements, available in the The MATLAB$^{\tiny ®}$ environment, with the PDE (partial-differential-equations) toolbox. The grid was non-uniform in both x and y directions, and varied from one geometry to the next. The appropriate mesh size was determined by successive refinements (h-adaptively), increasing the number of elements four times from one current mesh size to the next one. For the sake of brevity, the grid independence test can be seen in \cite{Gonzales2015b}, and, therefore, it is note repeated here.
+
+\section{GEOMETRIC OPTIMIZATION}
+
+The CD method is employed to determine the values for the  objectives and constraints chosen, as well as, the search space and the degrees of freedom (DOFs). With the optimization problem defined, the search for the optimal geometry was performed with two optimization algorithms, SA and DE. The parameters of these two heuristic methods applied are also investigated. Therefore, the results are compared in order to indicate the best method for the case studies in this work. For the SA algorithm, five different functions of Cooling Schedules (CS) are tested, the traditional schedules Boltz and Exponential present in the MATLAB$^{\tiny ®}$ optimization toolbox, and the hybrid CS (BoltzExp, ConstExp1, and ConstExp2) proposed by \cite{Gonzales2015b, Gonzales2015}. The DE algorithm is also  varied in four versions with different parameters for the crossover and mutation operators.
+
+The geometric optimization of double-t shaped cavities is realized by the variation of the parameters that define the geometry cavity and, according to the CD method, this process must be submitted to constraints. However, the cavity studied here has nine variables ($H$, $L$, $H_{0}$, $L_{0}$, $H_{1}$, $L_{1}$, $H_{2}$, $L_{2}$ and $S1$) and four constraints ($A$, $\phi_{c}$, $\phi_{1}$ and $\phi_{2}$). Then, five degrees of freedom are needed to complete the equations and allow the determination of the geometry ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$). The optimization process is concentrated in four and five DOFs. Firstly, the four DOFs optimization is performed by the optimization of the three DOFs ( $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) for ten different values of $H_{0}/L_{0}$,  keeping fixed  H/L = 1 and the four study constraints are kept as $A$ = 1, $\phi_{c}$ = 0.1; $\phi_{1}$ = 0.015; and $\phi_{2}$ = 0.015. The five DOFs optimization is performed by the optimization of four DOFs ($H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) for ten different values of H/L.  The constraints are kept with the same values used in the four  DOFs optimization. Therefore, at the end of the four  DOFs optimization process, each algorithm achieves the curve of effect of the DOF  $H_{0}/L_{0}$ over optimal geometry. The curve of effect of the DOF H/L over optimal geometry, is also obtained in the five DOFs optimization process. For the sake of brevity, the equations geometry that show the variable definition as function of degrees of freedom can be seen in \cite{Gonzales2015b}.
+
+\section{RESULTS}
+
+The results of the four DOFs optimization process performed by thirty runs of each algorithm, with two versions of SA and three versions of DE algorithm, were performed and saved in a database. All the algorithms conduct to the optimal geometry and maximum excess of temperature three times minimized. However, because of the stochastic nature, the algorithms do not produce the same results in all thirty rounds, and the average value is obtained to construct the graphics shown in Figure \ref{figure02}, allowing to observe the algorithm version that is closer to the correct result.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/4dof/de_sa_h0l0-tmin-4dof.png}
+\caption{ {\small Effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$ and $(H_{1}/L_{1})_{3\times o}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure02}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png}
+\caption{ {\small Effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_{o}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure03}
+\end{figure}
+
+For the five DOFs optimization, was run four versions of DE algorithm that differs on Crossover and Mutation parameters, as well as, five versions of SA algorithm with different Cooling Schedule parameter. For each ratio of H/L were performed thirty runs of each algorithm and recorded the maximum excess of temperature four times minimized and the optimal geometry Effect obtained by the algorithms on each operation. Statistical measures also were stored on the database, as well as, the minimal values of the maximum excess of temperature four times minimized and its respective optimal geometries. The Figure \ref{figure04} shows  the minimal values of the maximum excess of temperature four times minimized represented by the black line, and other curves represents the average of this value reached for each algorithm. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_tmin.png}
+\caption{ {\small Effect of $H/L$ over $({\theta}_{max})_{4\times m}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure04}
+\end{figure}
+
+The Figure \ref{figure05} show the comparison between the results...
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h0l0.png}
+\caption{ {\small Effect of $H/L$ over ${(H_{0}/L_{0})_{4\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure05}
+\end{figure}
+
+The Figure \ref{figure06} show the comparison between the results...
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h2l2.png}
+\caption{ {\small Effect of $H/L$ over ${(H_{2}/L_{2})_{3\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure06}
+\end{figure}
+
+
+The Figure \ref{figure07} show the comparison between the results...
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h1l1.png}
+\caption{ {\small Effect of $H/L$ over ${(H_{1}/L_{1})_{2\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure07}
+\end{figure}
+
+
+The Figure \ref{figure08} show the comparison between the results...
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h1l1.png}
+\caption{ {\small Effect of $H/L$ over ${(S_{1}/H_{0})_{2\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\label{figure08}
+\end{figure}
 
 \section{CONCLUSIONS}
-This section should be included and need to show the main contributions of the paper in a briefly form.
+
+The results show that the versions of the DE algorithms represent the results that come closest to the right effect. Moreover, the version DE1 has the most robust results with minor average and more approximated results to the curve of the effect of $H_{0}/L_{0}$ over $(H_{2}/L_{2})_{3xo}$ optimal, and to the curve of the maximum excess of temperature three times minimized $({\theta}_{max})_{3\times m}$.
+
 
 \subsection*{\textit{Acknowledgements}}
-This section should be positioned between the end of the text and the reference list. Type \textbf{\textit{Acknowledgements}} in boldface italics, skip one line of space and type the text in regular type.
+G. V. Gonzales acknowledges IF-SUL and PPGMC-FURG by support. E. D. dos Santos is sponsored by CNPq. Antônio J. Silva Neto acknowledges the financial support provided by FAPERJ, CNPq and CAPES.
 
 
 % ------------------------------------------------------------------------
-\begin{thebibliography}{99}
+
 \fontsize{11}{0}\selectfont
-\bibitem[Aznar \& Pessoa, 1994]{Aznar94}
-Aznar, M., Pessoa, F.L.P. and Silva Telles, A. (1994), ``Vapor-Liquid Equilibria of Mixed Solvent-Salt Systems using a MHV2 Model with the Wilson Equation'', {\em X Congresso Brasileiro de Engenharia Química}, São Paulo, vol 1, 38-43.
-
-\bibitem[Freitas et~al., 2008]{Freitas08}
-de Freitas, G.C.S.; Peixoto, F.C.; Vianna Jr, A.S. (2008), Simulation of a thermal battery using Phoenics. Journal of Power Sources, 179, 424-429. 
-
-\bibitem[Duarte, 1999]{Duarte99}
-Duarte, C.S.A. (1999), {\em Equilíbrio Líquido-Líquido em Sistemas contendo Polímero e Eletrólito: Água/ Polietileno-glicol/Fosfato}, Laboratório de Equilíbrio de Fases, FEQ/UNICAMP, Campinas.
-
-\bibitem[Fredenslund, 1993]{Fredenslund93}
-Fredenslund A. e Sorensen, J.M. (1993), ``Group Contribution Estimation Methods'', in {\em  Models for Thermodynamic and Phase Equilibria Calculations}, S.I. Sandler (ed.), Marcel Dekker, Inc., New York.
-
-\bibitem[Silva, 2005]{Silva2005}
-Silva, L.F. (2005), ``{\em Predição de Pontos Críticos de Misturas Termodinâmicas}'', Tese de Doutorado, IPRJ/UERJ, Nova Friburgo.
-
-\bibitem[Krevelenm, 1990]{Krevelen90}
-Van Krevelen, D.W. (1990),{\em ``Properties of Polymers. Their Correlation with Chemical Structure, Their Numerical Estimation and Prediction from Additive Group Contribuition}'', 3º ed., Elsevier, Amsterdam.
-\end{thebibliography}
-\vspace*{-0.1cm}
-\section*{APPENDIX A}
-This section, if necessary, must be included here.
-
-\vspace{0.5cm} % Example spaces
-
-For Papers written in Portuguese or Spanish a translation of title, abstract and keywords into English must be provided after the Appendix using the same format for title, abstract and keywords presented in the first page of the template.
+\bibliographystyle{xiiiemc}
+\bibliography{bibfile}
 % ------------------------------------------------------------------------
 
 %For papers written in Portuguese or Spanish.
