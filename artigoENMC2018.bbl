@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -59,13 +59,18 @@ Gonzales, G.V., dos Santos, E.D., Isoldi, L.A., Rocha, L.A.O., Silva~Neto, A.J.
 
 \bibitem[{Gonzales \emph{et~al.}(2015{\natexlab{b}})Gonzales, Estrada,
   Emmendorfer, Isoldi, Xie, Rocha and dos Santos}]{Gonzales2015}
-Gonzales, G.V., Estrada, E.D.S.D., Emmendorfer, L.R., Isoldi, L.A., Xie, G.,
-  Rocha, L.A.O. and dos Santos, E.D., 2015{\natexlab{b}}.
-\newblock \enquote{{A comparison of Simulated Annealing schedules for
+Gonzales, G., Estrada, E.d.S., Emmendorfer, L., Isoldi, L., Xie, G., Rocha, L.
+  and dos Santos, E., 2015{\natexlab{b}}.
+\newblock \enquote{{A comparison of simulated annealing schedules for
   constructal design of complex cavities intruded into conductive walls with
   internal heat generation}}.
-\newblock \emph{Energy}, Vol.~93.
-\newblock ISSN 03605442.
+\newblock \emph{Energy}, Vol.~93, pp. 372--382.
+
+\bibitem[{Kirkpatrick \emph{et~al.}(1983)Kirkpatrick, Gelatt and
+  Vecchi}]{Kirkpatrick1983}
+Kirkpatrick, S., Gelatt, C.D. and Vecchi, M.P., 1983.
+\newblock \enquote{{Optimization by simulated annealing}}.
+\newblock \emph{Science}.
 
 \bibitem[{Lorenzini \emph{et~al.}(2014)Lorenzini, Biserni, Estrada, Isoldi, dos
   Santos and Rocha}]{Lorenzini2014}
@@ -89,6 +94,12 @@ Lorenzini, G., Garcia, F.L., {Dos Santos}, E.D., Biserni, C. and Rocha, L.A.,
 Reddy, J.N. and Gartling, D.K., 1994.
 \newblock \emph{The Finite Element Method in Heat Transfer and Fluid Dynamics}.
 \newblock McGrawHill, New York.
+
+\bibitem[{Storn and Price(1997)}]{Storn1997}
+Storn, R. and Price, K., 1997.
+\newblock \enquote{{Differential Evolution - A Simple and Efficient Heuristic
+  for Global Optimization over Continuous Spaces}}.
+\newblock \emph{Journal of Global Optimization}, Vol.~11, No.~4, pp. 341--359.
 
 \bibitem[{Xie \emph{et~al.}(2010)Xie, Chen and Sun}]{Xie2010}
 Xie, Z., Chen, L. and Sun, F., 2010.

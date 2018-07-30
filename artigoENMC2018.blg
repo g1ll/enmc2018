@@ -4,44 +4,44 @@ The top-level auxiliary file: artigoENMC2018.aux
 The style file: xiiiemc.bst
 Database file #1: bibfile.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 11 entries,
+You've used 13 entries,
             3271 wiz_defined-function locations,
-            745 strings with 7807 characters,
-and the built_in function-call counts, 8700 in all, are:
-= -- 669
-> -- 390
-< -- 23
-+ -- 152
-- -- 138
-* -- 661
-:= -- 1228
-add.period$ -- 37
-call.type$ -- 11
-change.case$ -- 102
-chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 685
-empty$ -- 618
-format.name$ -- 171
-if$ -- 1749
+            759 strings with 8133 characters,
+and the built_in function-call counts, 10169 in all, are:
+= -- 794
+> -- 434
+< -- 28
++ -- 169
+- -- 153
+* -- 765
+:= -- 1423
+add.period$ -- 42
+call.type$ -- 13
+change.case$ -- 117
+chr.to.int$ -- 12
+cite$ -- 13
+duplicate$ -- 805
+empty$ -- 730
+format.name$ -- 194
+if$ -- 2054
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 142
-newline$ -- 68
-num.names$ -- 44
-pop$ -- 303
+missing$ -- 164
+newline$ -- 77
+num.names$ -- 52
+pop$ -- 354
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 103
 quote$ -- 0
-skip$ -- 268
+skip$ -- 325
 stack$ -- 0
-substring$ -- 365
-swap$ -- 435
-text.length$ -- 21
+substring$ -- 451
+swap$ -- 510
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 114
 warning$ -- 0
-while$ -- 52
+while$ -- 64
 width$ -- 0
-write$ -- 157
+write$ -- 180
