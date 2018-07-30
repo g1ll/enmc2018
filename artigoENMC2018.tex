@@ -112,79 +112,79 @@ The CD method is employed to determine the values for the  objectives and constr
 
 The geometric optimization of double-t shaped cavities is realized by the variation of the parameters that define the geometry cavity and, according to the CD method, this process must be submitted to constraints. However, the cavity studied here has nine variables ($H$, $L$, $H_{0}$, $L_{0}$, $H_{1}$, $L_{1}$, $H_{2}$, $L_{2}$ and $S1$) and four constraints ($A$, $\phi_{c}$, $\phi_{1}$ and $\phi_{2}$). Then, five degrees of freedom are needed to complete the equations and allow the determination of the geometry ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$). The optimization process is concentrated in four and five DOFs. Firstly, the four DOFs optimization is performed by the optimization of the three DOFs ( $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) for ten different values of $H_{0}/L_{0}$,  keeping fixed  H/L = 1 and the four study constraints are kept as $A$ = 1, $\phi_{c}$ = 0.1; $\phi_{1}$ = 0.015; and $\phi_{2}$ = 0.015. The five DOFs optimization is performed by the optimization of four DOFs ($H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) for ten different values of H/L.  The constraints are kept with the same values used in the four  DOFs optimization. Therefore, at the end of the four  DOFs optimization process, each algorithm achieves the curve of effect of the DOF  $H_{0}/L_{0}$ over optimal geometry. The curve of effect of the DOF H/L over optimal geometry, is also obtained in the five DOFs optimization process. For the sake of brevity, the equations geometry that show the variable definition as function of degrees of freedom can be seen in \cite{Gonzales2015b}.
 
-\section{RESULTS}
+\section{RESULTS AND DISCUSSIONS}
 
-The results of the four DOFs optimization process performed by thirty runs of each algorithm, with two versions of SA and three versions of DE algorithm, were performed and saved in a database. All the algorithms conduct to the optimal geometry and maximum excess of temperature three times minimized. However, because of the stochastic nature, the algorithms do not produce the same results in all thirty rounds, and the average value is obtained to construct the graphics shown in Figure \ref{figure02}, allowing to observe the algorithm version that is closer to the correct result.
+The results of the four DOFs optimization process performed by thirty runs of each algorithm, with different versions of SA and DE algorithms, were achieved and saved in a database. All the algorithms conduct to the optimal geometry and maximum excess of temperature three times minimized. However, because of the stochastic nature, the algorithms do not produce the same results in all thirty rounds, and the average value is obtained to construct the graphics shown in Fig. \ref{figure02}, allowing to observe the algorithm version that is closer to the correct result.
+
+
+In the Figure \ref{figure02} (a), it is possible observe the effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$ obtained by all algorithms. There is no difference between algorithms results until the ratio $H_{0}/L_{0}=10$, after this ratio the results diverges and the curves more closest to the minimum values of $({\theta}_{max})_{3\times m}$ are generated through by of the DE algorithm versions, mainly through the DE1 version. The SA versions with the cooling schedule functions Exponential, Boltzmann and hybrid BoltExp presents the greatest averages of  $({\theta}_{max})_{3\times m}$  for higher values of $H_{0}/L_{0}$. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/4dof/de_sa_h0l0-tmin-4dof.png}
-\caption{ {\small Effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$ and $(H_{1}/L_{1})_{3\times o}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$ and $(H_{2}/L_{2})_{3\times o}$ obtained by different versions of DE and SA algorithms. a) Effect over $({\theta}_{max})_{3\times m}$. b) Effect over $(H_{2}/L_{2})_{3\times o}$ }}
 \label{figure02}
 \end{figure}
+
+The Figure \ref{figure02}(b) shows the results of each algorithm analysed in this paper for the effect of  $H_{0}/L_{0}$ over $H_{2}/L_{2}$. In the Fig. \ref{figure02}(b) appears the same tendency observed in the effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$, where the SA algorithm versions achieves the greatest means, mainly after ratio $H_{0}/L_{0}=10$. The DE algorithm has a better performance and the DE1 algorithm version reached a avarage of $(H_{2}/L_{2})_{3\times o}$ more closest to the optimal values of $(H_{2}/L_{2})_{3\times o}$ for each value of  $H_{0}/L_{0}$.
+
+The effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_{o}$ is showed in the Fig. \ref{figure03}. The curvature represented by the black line in the \ref{figure03} (a) and (b) reproduce the effect of $H_{0}/L_{0}$ over the optimal values of the DOFs investigated. The others curvatures have the averages of this effect produced by each algorithm. In the Fig. \ref{figure03}(a) the results of all algorithm shows a great divergence to the effect of $H_{0}/L_{0}$ on the optimal values of the $(H_{1}/L_{1})_{2\times o}$ for the values of $H_{0}/L_{0}<10$. For high values of $H_{0}/L_{0}$ the averages reached by all algorithm converges to the right effect, except by the SA algorithm version whit the function of cooling schedule Exponential (saex). In the Figure \ref{figure03}(b) the effect of $H_{0}/L_{0}$ over $(S_{1}/H_{0})_{o}$ was better reproduced by the versions of DE algorithm and two versions of SA algorithm (sac1 and sac2). The DE1 and DE2 algorithms achieved the closest effects of the correct curvature, mainly for values of  $H_{0}/L_{0}>15$.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png}
-\caption{ {\small Effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_{o}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_{o}$ obtained by different versions of DE and SA algorithms. a) Effect over $(H_{1}/L_{1})_{2\times o}$. b) Effect over $(S_{1}/H_{0})_{o}$ }}
 \label{figure03}
 \end{figure}
 
-For the five DOFs optimization, was run four versions of DE algorithm that differs on Crossover and Mutation parameters, as well as, five versions of SA algorithm with different Cooling Schedule parameter. For each ratio of H/L were performed thirty runs of each algorithm and recorded the maximum excess of temperature four times minimized and the optimal geometry Effect obtained by the algorithms on each operation. Statistical measures also were stored on the database, as well as, the minimal values of the maximum excess of temperature four times minimized and its respective optimal geometries. The Figure \ref{figure04} shows  the minimal values of the maximum excess of temperature four times minimized represented by the black line, and other curves represents the average of this value reached for each algorithm. 
-
+The Figure \ref{figure04} shows  the minimal values of the maximum excess of temperature four times minimized represented by the black line, and other curves represents the average of this value reached for each algorithm in the geometric optimization process of five DOFs ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$). 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_tmin.png}
-\caption{ {\small Effect of $H/L$ over $({\theta}_{max})_{4\times m}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H/L$ over $({\theta}_{max})_{4\times m}$ obtained by different versions of DE and SA algorithms. a) Versions of DE algorithm. b) Versions of SA algorithm.}}
 \label{figure04}
 \end{figure}
-
-The Figure \ref{figure05} show the comparison between the results...
-
+For the five DOFs optimization, was run four versions of DE algorithm that differs on Crossover and Mutation parameters, as well as, five versions of SA algorithm with different Cooling Schedule parameter.
+For each ratio of H/L were performed thirty runs of each algorithm and recorded the maximum excess of temperature four times minimized and the effect of $H/L$ over optimal geometry obtained by the algorithms on each operation. Statistical measures also were stored on the database, as well as, the minimal values of the maximum excess of temperature four times minimized and its respective optimal geometries. Therefore, as can be seen in Fig. \ref{figure04}(a) in comparison whit the results showed in the Fig. \ref{figure04}(b) for SA algorithms versions, the versions of DE algorithm lead to nearest averages to the curve of minimum values of the $({\theta}_{max})_{4\times m}$. For values of $H/L > 0.5$ all algorithm can reproduce the effect of $H/L$ of $({\theta}_{max})_{4\times m}$ with precision. This behavior can be observed in the Fig. \ref{figure05}, where all algorithms achieved the correct effect of $H/L$ over ${(H_{0}/L_{0})_{4\times O}}$.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h0l0.png}
-\caption{ {\small Effect of $H/L$ over ${(H_{0}/L_{0})_{4\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H/L$ over ${(H_{0}/L_{0})_{4\times O}}$ obtained by different versions of DE and SA algorithms.  a) Versions of DE algorithm. b) Versions of SA algorithm.}}
 \label{figure05}
 \end{figure}
-
-The Figure \ref{figure06} show the comparison between the results...
-
+The Figure \ref{figure06} shows the comparison between the results of the versions of DE algorithm and variants of the SA algorithm for the effect of $H/L$ over ${(H_{2}/L_{2})_{3\times O}}$. In this case, the variations of DE algorithm brings the better results again, except by DE2 version for ratios of $H/L< 0.5$. The results of the SA algorithm versions showed in the Fig. \ref{figure06}(b), diverges of the correct effect of $H/L$ over ${(H_{2}/L_{2})_{3\times O}}$.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h2l2.png}
-\caption{ {\small Effect of $H/L$ over ${(H_{2}/L_{2})_{3\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H/L$ over ${(H_{2}/L_{2})_{3\times O}}$ obtained by different versions of DE and SA algorithms. a) Versions of DE algorithm. b) Versions of SA algorithm.}}
 \label{figure06}
 \end{figure}
-
-
-The Figure \ref{figure07} show the comparison between the results...
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h1l1.png}
-\caption{ {\small Effect of $H/L$ over ${(H_{1}/L_{1})_{2\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\caption{ {\small Effect of $H/L$ over ${(H_{1}/L_{1})_{2\times O}}$ obtained by different versions of DE and SA algorithms.  a) Versions of DE algorithm. b) Versions of SA algorithm.}}
 \label{figure07}
 \end{figure}
 
 
-The Figure \ref{figure08} show the comparison between the results...
+The Figure \ref{figure08} shows the comparison between the results...
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_h1l1.png}
-\caption{ {\small Effect of $H/L$ over ${(S_{1}/H_{0})_{2\times O}}$ obtained by different versions of DE and SA algorithms.}}
+\includegraphics[width=1\linewidth]{imgs/5dof/de_sa_hl_s1h0.png}
+\caption{ {\small Effect of $H/L$ over ${(S_{1}/H_{0})_{2\times O}}$ obtained by different versions of DE and SA algorithms.  a) Versions of DE algorithm. b) Versions of SA algorithm.}}
 \label{figure08}
 \end{figure}
 
 \section{CONCLUSIONS}
 
-The results show that the versions of the DE algorithms represent the results that come closest to the right effect. Moreover, the version DE1 has the most robust results with minor average and more approximated results to the curve of the effect of $H_{0}/L_{0}$ over $(H_{2}/L_{2})_{3xo}$ optimal, and to the curve of the maximum excess of temperature three times minimized $({\theta}_{max})_{3\times m}$.
+The results shows that the versions of the DE algorithms represent the results that come closest to the right effect. Moreover, the version DE1 has the most robust results with minor average and more approximated results to the curve of the effect of $H_{0}/L_{0}$ over $(H_{2}/L_{2})_{3xo}$ optimal, and to the curve of the maximum excess of temperature three times minimized $({\theta}_{max})_{3\times m}$.
 
 
 \subsection*{\textit{Acknowledgements}}
