@@ -3,45 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: artigoENMC2018.aux
 The style file: xiiiemc.bst
 Database file #1: bibfile.bib
+Warning--I didn't find a database entry for "Gonzaes2015a"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 13 entries,
+You've used 14 entries,
             3271 wiz_defined-function locations,
-            759 strings with 8133 characters,
-and the built_in function-call counts, 10169 in all, are:
-= -- 794
-> -- 434
-< -- 28
-+ -- 169
-- -- 153
-* -- 765
-:= -- 1423
-add.period$ -- 42
-call.type$ -- 13
-change.case$ -- 117
-chr.to.int$ -- 12
-cite$ -- 13
-duplicate$ -- 805
-empty$ -- 730
-format.name$ -- 194
-if$ -- 2054
+            772 strings with 8444 characters,
+and the built_in function-call counts, 11310 in all, are:
+= -- 888
+> -- 476
+< -- 34
++ -- 185
+- -- 168
+* -- 852
+:= -- 1561
+add.period$ -- 45
+call.type$ -- 14
+change.case$ -- 127
+chr.to.int$ -- 13
+cite$ -- 14
+duplicate$ -- 896
+empty$ -- 810
+format.name$ -- 212
+if$ -- 2298
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 164
-newline$ -- 77
-num.names$ -- 52
-pop$ -- 354
+missing$ -- 180
+newline$ -- 82
+num.names$ -- 56
+pop$ -- 383
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 112
 quote$ -- 0
-skip$ -- 325
+skip$ -- 371
 stack$ -- 0
-substring$ -- 451
-swap$ -- 510
-text.length$ -- 25
+substring$ -- 524
+swap$ -- 585
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
+type$ -- 123
 warning$ -- 0
-while$ -- 64
+while$ -- 72
 width$ -- 0
-write$ -- 180
+write$ -- 194
+(There was 1 warning)
