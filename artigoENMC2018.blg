@@ -3,11 +3,10 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: artigoENMC2018.aux
 The style file: xiiiemc.bst
 Database file #1: bibfile.bib
-Warning--I didn't find a database entry for "Gonzaes2015a"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 14 entries,
             3271 wiz_defined-function locations,
-            772 strings with 8444 characters,
+            770 strings with 8420 characters,
 and the built_in function-call counts, 11310 in all, are:
 = -- 888
 > -- 476
@@ -46,4 +45,3 @@ warning$ -- 0
 while$ -- 72
 width$ -- 0
 write$ -- 194
-(There was 1 warning)
