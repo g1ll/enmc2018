@@ -110,7 +110,9 @@ For the sake of brevity, the equations with dimensionless variables, the equatio
 \tilde{\theta}_{max}=\frac{\theta_{max}-\theta_{min}}{q^{'''}\cdot\frac{A}{k}}\label{fo}
 \end{equation}
 
-The determination of $\tilde{\theta}_{max}$ is needed to optimize the five degrees of freedom ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) submitted to the corresponding constraints of the cavity area ($\phi_{c}$, $\phi_{1}$ and $\phi_{2}$) and the total solid area. Where $\phi_{1}$ and $\phi_{2}$ represent the dimensionless area of each branch of the Double-T shaped cavity. In this paper five DOFs ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) are optimized. The function represented by Eq. (\ref{fo}) is determined numerically by solving Eq. (\ref{calor}) for the temperature field in every assumed configuration ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$), and calculating $\tilde{\theta}_{max}$ to see whether its value may be minimized by varying the configuration. The numerical solution is performed with the Finite Element Method (FEM)\citep{Reddy1994}, based on linear triangular elements, available in the MATLAB$^{\tiny ®}$ environment, with PDE (partial-differential-equations) toolbox. The grid was non-uniform in both $x$ and $y$ directions, and varied from one geometry to the next. The appropriate mesh size was determined by successive refinements (h-adaptively), increasing the number of elements four times from one current mesh size to the next one. For the sake of brevity, the grid independence test can be seen in \cite{Gonzales2015b}, and, therefore, it is not repeated.
+The determination of $\tilde{\theta}_{max}$ is needed to optimize the five degrees of freedom ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) submitted to the corresponding constraints of the cavity area ($\phi_{c}$, $\phi_{1}$ and $\phi_{2}$) and the total solid area. Where $\phi_{1}$ and $\phi_{2}$ represent the dimensionless area of each branch of the Double-T shaped cavity. In this paper five DOFs ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$) are optimized. The function represented by Eq. (\ref{fo}) is determined numerically by solving Eq. (\ref{calor}) for the temperature field in every assumed configuration ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ and $S_{1}/H_{0}$), and calculating $\tilde{\theta}_{max}$ to see whether its value may be minimized by varying the configuration. The numerical solution is performed with the Finite Element Method (FEM)\citep{Reddy1994}, based on linear triangular elements, available in the MATLAB$^{\tiny ®}$ environment, with PDE (partial-differential-equations) toolbox. 
+
+%%The grid was non-uniform in both $x$ and $y$ directions, and varied from one geometry to the next. The appropriate mesh size was determined by successive refinements (h-adaptively), increasing the number of elements four times from one current mesh size to the next one. For the sake of brevity, the grid independence test can be seen in \cite{Gonzales2015b}, and, therefore, it is not repeated.
 
 \section{GEOMETRIC OPTIMIZATION}
 
@@ -131,14 +133,14 @@ The effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{imgs/4dof/de_sa_h0l0-tmin-4dof.png}
+\includegraphics[width=0.95\linewidth]{imgs/4dof/de_sa_h0l0-tmin-4dof.png}
 \caption{ {\small Effect of $H_{0}/L_{0}$ over $({\theta}_{max})_{3\times m}$ and $(H_{2}/L_{2})_{3\times o}$ obtained with different DE and SA algorithms over:  a) over $({\theta}_{max})_{3\times m}$. b) over $(H_{2}/L_{2})_{3\times o}$ }}
 \label{figure02}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png}
+\includegraphics[width=0.95\linewidth]{imgs/4dof/de_sa_h0l0-h1l1-s1h0-4dof.png}
 \caption{ {\small Effect of $H_{0}/L_{0}$ over $(H_{1}/L_{1})_{2\times o}$ and $(S_{1}/H_{0})_{o}$ obtained with different DE and SA algorithms over: a) $(H_{1}/L_{1})_{2\times o}$, b) $(S_{1}/H_{0})_{o}$ }}
 \label{figure03}
 \end{figure}
