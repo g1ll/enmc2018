@@ -1,0 +1,195 @@
+\documentclass[xcolor=dvipsnames,10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
+\usefonttheme[professional]{serif}
+
+\justifying
+
+%----------------------------------------------------------------------------------------------------------------------------------
+
+% JUSTIFICAR TEXTO DAS LISTAS DE ITENS
+
+\makeatletter
+\renewcommand{\itemize}[1][]{%
+  \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}%
+  \ifnum \@itemdepth >2\relax\@toodeep\else
+    \advance\@itemdepth\@ne
+    \beamer@computepref\@itemdepth% sets \beameritemnestingprefix
+    \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamercolor[fg]{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamertemplate{itemize/enumerate \beameritemnestingprefix body begin}%
+    \list
+      {\usebeamertemplate{itemize \beameritemnestingprefix item}}
+      {\def\makelabel##1{%
+          {%
+            \hss\llap{{%
+                \usebeamerfont*{itemize \beameritemnestingprefix item}%
+                \usebeamercolor[fg]{itemize \beameritemnestingprefix item}##1}}%
+          }%
+        }%
+      }
+  \fi%
+  \beamer@cramped%
+  \justifying% NEW
+  %\raggedright% ORIGINAL
+  \beamer@firstlineitemizeunskip%
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%COR DO TEMPLATE SEMELHANTE AO LOGO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{laranja}{rgb}{0.95703125,0.5859375,0.30859375}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%CORES E ESTRUTURAS DE ELEMENTOS DIVERSOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{headline}{fg=black}
+\setbeamercolor{footline}{fg=black}
+\setbeamercolor{block body}{use=structure,bg=white}
+\setbeamercolor{block title}{use=structure,bg=laranja,fg=black}
+\setbeamercolor{item}{fg=laranja}
+\setbeamercolor{alerted text}{fg=laranja}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{subtitle}{fg=black}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PROPRIEDADES VISUAIS DE ELEMENTOS DIVERSOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[]{default}
+\addtobeamertemplate{block begin}{}{\justifying} % Justify all blocks
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[square]
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{invisible}
+\setbeamertemplate{sections in toc}[ball]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LOGOS POSICIONADOS NO RODAPÉ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \vspace{1em}
+  \tikz \fill [laranja] (0,0) rectangle (15, 4pt);
+
+\vspace{-0.5em}
+\begin{center}
+\includegraphics[height=0.62cm]{logo-iff.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-iprj.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-uerj.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-uesc.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-capes.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-cnpq.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-faperj.png}\hspace{0.4em}
+\includegraphics[height=0.62cm]{logo-buzios.png}\vspace{-0.5em}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LOGO DO EVENTO COMO TÍTULO DE TODOS OS SLIDES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{
+
+\vspace{-1em}
+\begin{center}
+\includegraphics[width=0.55\textwidth]{logo-evento.png}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INICIO DOS SLIDES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textsc{\footnotesize COMPARISON BETWEEN DIFFERENCIAL EVOLUTION AND SIMULATED ANNEALING ALGORITHMS APPLIED TO THE CONSTRUCTAL DESIGN DOUBLE-T SHAPED CAVITIES
+}}
+\author{\footnotesize G. V. Gonzales,  L. A. Isoldi, L. A. O. Rocha, E. D. dos Santos, A. J. Silva Neto}
+\institute{\scriptsize Programa de Pós-Graduação em Modelagem Computacional - FURG}
+\subtitle{\scriptsize Métodos Computacionais}
+\date{\scriptsize Outubro de 2018}
+
+\begin{document}
+
+\frame{\titlepage}
+\frame{\tableofcontents}
+
+\section{Introdução}
+
+\begin{frame}
+
+\begin{block}{Título do Bloco}
+\begin{equation}
+\int_{a}^{b} x^2  \mathrm{d} x
+\end{equation}
+\end{block}
+
+\end{frame}
+
+\section{Modelagem Matemática e Numérica}
+
+\subsection{Primeira sub-seção}
+
+\begin{frame}
+\begin{block}{Título do Bloco}
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus.
+\begin{enumerate}
+\item Nested item 1
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus.
+\end{enumerate}
+\item The second item
+\item The third item
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\subsection{Segunda sub-seção}
+
+\begin{frame}
+
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus.
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus.
+\item Nested item 2
+\end{itemize}
+\item The second item
+\item The third item
+\end{itemize}
+
+\end{frame}
+
+\section{Otimização}
+
+\subsection{Design Construtal}
+
+\subsection{Evolução Diferencial}
+\begin{frame}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus. Aenean urna nisi, rhoncus et velit a, fringilla ultrices turpis. Maecenas fermentum lectus sit amet metus porta efficitur. Nunc vitae odio bibendum, gravida massa ut, bibendum nulla. Duis id lorem consequat, consequat eros a, blandit risus. Pellentesque scelerisque elementum ligula quis blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a enim faucibus, tempor risus sit amet, convallis ligula. Duis nec leo eu lectus cursus blandit.
+
+\end{frame}
+
+\begin{frame}
+
+\begin{block}{Novo bloco}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper odio in condimentum rutrum. Nunc eget lectus volutpat, iaculis nibh sit amet, finibus risus. Aenean urna nisi, rhoncus et velit a, fringilla ultrices turpis. Maecenas fermentum lectus sit amet metus porta efficitur. Nunc vitae odio bibendum, gravida massa ut, bibendum nulla. Duis id lorem consequat, consequat eros a, blandit risus. Pellentesque scelerisque elementum ligula quis blandit.
+\end{block}
+
+\end{frame}
+
+\end{document}
