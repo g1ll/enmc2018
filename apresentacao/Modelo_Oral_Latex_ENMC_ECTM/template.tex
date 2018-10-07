@@ -47,7 +47,17 @@
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%TAMANHO DE BLOCOS VARIÁVEIS
+\newenvironment<>{varblock}[2][1.2\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}}
+  {\par%
+    \usebeamertemplate{block end}%
+  \end{actionenv}}
+%%-------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %COR DO TEMPLATE SEMELHANTE AO LOGO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,14 +100,14 @@
 
 \vspace{-1.3em}
 \begin{center}
-\includegraphics[height=0.50cm]{logo-iff.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-iprj.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-uerj.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-uesc.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-capes.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-cnpq.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-faperj.png}\hspace{0.4em}
-\includegraphics[height=0.50cm]{logo-buzios.png}\vspace{-0.5em}
+\includegraphics[height=0.5cm]{logo-iff.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-iprj.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-uerj.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-uesc.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-capes.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-cnpq.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-faperj.png}\hspace{0.4em}
+\includegraphics[height=0.5cm]{logo-buzios.png}\vspace{-0.5em}
 \end{center}
 }
 
@@ -108,7 +118,7 @@
 
 \vspace{-1em}
 \begin{center}
-\includegraphics[width=0.5	\textwidth]{logo-evento.png}
+\includegraphics[width=0.5\textwidth]{logo-evento.png}
 \end{center}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -162,7 +172,7 @@ A. J. Silva Neto}
 
 \section{Modelagem Matemática e Numérica}
 \begin{frame}{}
-\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
+\begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
 		\textbf{Hipóteses Simplificativas:}
 		\begin{enumerate}
 			\item Regime Permanente
@@ -182,18 +192,18 @@ A. J. Silva Neto}
 		\end{equation}
 	\end{block} 
 \end{frame}
-\begin{frame}
-%%\begin{block}{\textbf{MODELAGEM MATEMÁTICA}}
+\begin{frame}[plain]
+\begin{block}{\textbf{MODELAGEM MATEMÁTICA}}
 \begin{figure}[h!]
 			\centering
-			\includegraphics[width=0.66\linewidth]{../../imgs/duplo_t.png}
+			\includegraphics[width=0.9\linewidth]{../../imgs/duplo_t.png}
 			\caption{ {\small Domínio Computacional da Cavidade em Forma de Duplo-T.}}
 			\label{figure01}
 		\end{figure}
-%%\end{block}
+\end{block}
 \end{frame}
 \begin{frame}{}
-	\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
+	\begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
 	\textbf{Restrições: }
 		\begin{equation}
 			A = HL \label{area_total}
@@ -207,13 +217,12 @@ A. J. Silva Neto}
 	\end{block} 
 \end{frame}
 \begin{frame}
-\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
+%%\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
 \textbf{Adimensionalização do Problema:}
 \begin{equation}
-			\tilde{\theta} = \frac{\theta - \theta_{min}}{q^{'''}\cdot\frac{A}{k}}\label{tadim}
 		\end{equation}
 		\begin{equation}
-				\tilde{x},\tilde{y},\tilde{H}_{0},\tilde{H}_{1},\tilde{H}_{2},\tilde{L}_{0},\tilde{L}_{1},\tilde{L}_{2},\tilde{H},\tilde{L},\tilde{S}_{1} = \frac{x,y,H_{0},H_{1},H_{2},L_{0},L_{1},L_{2},H,L,S_{1}}{A^{1/2}}\label{vadim}
+				\tilde{x},\tilde{y},\tilde{H}_{0},\tilde{H}_{1},\tilde{H}_{2},\tilde{L}_{0},\tilde{L}_{1},\tilde{L}_{2},\tilde{H},\tilde{L},\tilde{S}_{1} = \frac{x,y,H_{0},H_{1},H_{2},L_{0},L_{1},L_{2},H,L,S_{1}}{A^{1/2}}\label{vadim} 
 		\end{equation}
 		\begin{equation}
 				\frac{\partial ^{2}\tilde{\theta}}{\partial \tilde{x}^{2}}+\frac{\partial ^{2} \tilde{\theta}}{\partial \tilde{y}^{2}}+1=0\label{calor}
@@ -221,10 +230,10 @@ A. J. Silva Neto}
 		\begin{equation}
 			\tilde{\theta}_{max}=\frac{\theta_{max}-\theta_{min}}{q^{'''}\cdot\frac{A}{k}}\label{fo}
 		\end{equation}
-		\end{block}
+		%%\end{block}
 \end{frame}
 \begin{frame}
-\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
+\begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
 \justifying
 	\setlength{\parindent}{1cm}
 		A função representada pela Eq. \ref{fo} é resolvida numericamente através da resolução da Eq. \ref{calor} para a determinação dos os campos de temperatura em todo o domínio computacional para diferentes configurações de ($H$, $L$, $H_{0}$, $L_{0}$, $H_{1}$, $L_{1}$, $H_{2}$, $L_{2}$ e $S_{1}$) e calculando o $\tilde{\theta}_{max}$ para minimizar o seu valor através da variação da configuração geométrica.\\ A solução numérica é dada pela aplicação do método de Elementos Finitos (FEM), baseado em elementos triangulares, desenvolvido no ambiente MATLAB$^{\tiny ®}$, com o pacote PDE (partial-differential-equations) toolbox.\\ A malha utilizada é não-uniforme em ambos eixos $x$ e $y$, e varia de uma geometria para outra. O tamanho é de  80649 mil elementos.
@@ -232,20 +241,20 @@ A. J. Silva Neto}
 \end{frame}
 \section{Otimização}
 \begin{frame}
-	\begin{block}{\textbf{\textsc{Otimização}}}
+	\begin{block}{\textbf{\textsc{OTIMIZAÇÃO}}}
 	\justifying
 	\setlength{\parindent}{1cm}
-	A metodologia de otimização aplicada neste trabalho utiliza-se do método Constructal Design associado as meta-heurísticas de Evolução Diferencial e Recozimento Simulado. 
+	A metodologia de otimização aplicada neste trabalho utiliza-se do método Constructal Design associado as meta-heurísticas Differential Evolution (DE) e Simulated Annealing (SA). 
 	\begin{itemize}
-		\item \textbf{Constructal Desing}: para definição dos objetivos, restrições, graus de liberdade e espaço de busca.
-		\item \textbf{Algoritmos de Otimização}: neste trabalho aplicamos os algoritmos de Evolução Diferencial e Recozimento Simulado  para a obtenção das geometrias ótimas.
+		\item \textbf{Constructal Desing}: para definição dos objetivos, restrições, Graus de Liberdade (GL) e espaço de busca.
+		\item \textbf{Algoritmos de Otimização}: neste trabalho aplicamos os algoritmos DE e SA  para a obtenção das geometrias ótimas.
 		\item \textbf{Comparação dos Resultados}: São utilzidos os valores de média entre 30 execuções de cada algoritmo e comparados com os melhores resultados encontrados entre todas as rodadas.
 	\end{itemize}
 	\end{block}
 \end{frame}
 \subsection{Design Construtal}
 \begin{frame}{}
-	\begin{block}{\textbf{Constructal Design}}
+	\begin{block}{\textbf{CONSTRUCTAL DESIGN}}
 		\justifying
 		\setlength{\parindent}{1cm}
 		\textbf{Definição dos Graus de Liberdade e Restrições:}
@@ -261,13 +270,13 @@ A. J. Silva Neto}
 			\begin{equation}
 				\phi_2 = \tilde{H_{2}}\tilde{L_{2}}
 			\end{equation}
-			\item Temos cinco graus de liberdade ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ e $S_{1}/H_{0}$) para o fechamento das equações;
+			\item Temos cinco Graus de liberdade ($H/L$, $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ e $S_{1}/H_{0}$) para o fechamento das equações;
 			
 		\end{itemize}
 	\end{block}
 \end{frame}
 \begin{frame}{}
-	\begin{block}{\textbf{Constructal Design}}
+	\begin{block}{\textbf{CONSTRUCTAL DESIGN}}
 		\justifying
 		\setlength{\parindent}{1cm}
 		\begin{itemize}
@@ -281,49 +290,53 @@ A. J. Silva Neto}
 
 \subsection{Configuração dos Algoritmos}
 \begin{frame}{}
-\textbf{Configurações dos Algoritmos}
+\begin{block}{
+\textbf{\textsc{CONFIGURAÇÃO DOS ALGORITMOS}}}
 			\begin{table}[H] % !htbp
 			\caption{Versões do Algoritmo Differential Evolution. }
 			\label{table1}
 			\vspace{5pt}
 			\centering{}
-			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}c|c|c|c|c|c|c|c|c|c}        % {0.8\textwidth}
+			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}c|c|c|c|c}        % {0.8\textwidth}
 			\hline
 				& DE1 & DE2 & DE3 & DE4 \tabularnewline
 			\hline
-				$F$ & 1,5 & 2,0 & 1,5 & 2,0\tabularnewline
+				Amplificação $F$ & 1,5 & 2,0 & 1,5 & 2,0\tabularnewline
 			\hline 
-				Taxa Cruz. & 0,7 & 0,9 & 0,7 & 0,9\tabularnewline
+				Cruzamento & 0,7 & 0,9 & 0,7 & 0,9\tabularnewline
 			\hline
-				Tipo & rand/1/bin & rand/1/bin & best/2/bin & best/2/bin \tabularnewline
+				Mutação & rand/1/bin & rand/1/bin & best/2/bin & best/2/bin \tabularnewline
+			\hline 
+				Iter. $H_{0}/L_{0}$ & 150 & - & - & -\tabularnewline
 			\hline
-				Iter & 25 G x 20 I = 500 & - & - & - \tabularnewline
-				\hline
+				Iter $H/L$ & 300 & - & - & - \tabularnewline
+			\hline
 			\end{tabular*}
 			\end{table}
+			\end{block}
 \end{frame}	
 \begin{frame}
-\textbf{Configurações dos Algoritmos}
+\begin{varblock}[11.5cm]{
+\textbf{\textsc{CONFIGURAÇÃO DOS ALGORITMOS}}}
 			\begin{table}[H] % !htbp
 			\caption{Versões do Algoritmo Simulated Annealing. }
 			\label{table1}
 			\vspace{5pt}
 			\centering{}
-			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}c|c|c|c|c|c|c|c|c|c}        % {0.8\textwidth}	
+			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}c|c|c|c|c|c} %%{0.8\textwidth}	
 			\hline
-				& SA{\_}E & SA{\_}B & SA{\_}BE & SA{\_}C1 & SA{\_}C2\tabularnewline
+				& SAEX & SABO & SABE & SAC1 & SAC2\tabularnewline
 			\hline
-				C. Schedule & Exponencial & Boltz & BoltzExp & ConstExp1 &  
-ConstExp2\tabularnewline
+				C. Schedule & \small Exponencial & \small Boltz & \small BoltzExp & \small ConstExp1 &  
+\small ConstExp2\tabularnewline
 			\hline 
-				StallIterLimit. & 250 & - & - & -&-\tabularnewline
+				Iter. $H_{0}/L_{0}$ & 150 & - & - & -&-\tabularnewline
 			\hline
-				Reannealing & 150 & - & - & - & -\tabularnewline
-			\hline
-				Iter & 500 & - & - & - & -\tabularnewline
+				Iter $H/L$ & 300 & - & - & - & -\tabularnewline
 			\hline
 			\end{tabular*}
-			\end{table}	
+			\end{table}				
+			\end{varblock}
 	\end{frame}
 
 
@@ -331,10 +344,81 @@ ConstExp2\tabularnewline
 
 \begin{frame}
 
-\begin{block}{Resultados}
-Resultado...
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+
+\justifying
+		\setlength{\parindent}{1cm}
+Primeiramente serão apresentados os resultados da otimização de 4 GLs, com o efeito de h0/l0 sobre a geometria ótima (h1/l1,h2/l2 e s1/h0) e temperatura máxima em excesso três vezes minimizada (tmax)3m.
+Foram investigados valores de  h0/l0 no intervalo de 0 a 25, onde para cada valor foram executadas 30 rodadas de cada algoritmo.
 \end{block}
 
+\end{frame}
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-tmin.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(\tilde{\theta}_{max})_{3\times m}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure02}
+\end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure03}
+\end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure03}
+\end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure03}
+\end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h1l1.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{1}/L_{2})_{2\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure03}
+\end{figure}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[plain]
+\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0_s1h0.png}
+\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(S_{1}/H_{0})_{o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+\label{figure03}
+\end{figure}
+\end{block}
 \end{frame}
 
 \section{Conclusão}
@@ -352,7 +436,6 @@ Conclusão...
 \begin{frame}
 
 \begin{block}{Referências}
-Referências...
 \end{block}
 
 \end{frame}
