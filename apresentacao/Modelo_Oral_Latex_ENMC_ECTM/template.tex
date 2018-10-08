@@ -138,14 +138,19 @@ A. J. Silva Neto}
 \frame{\tableofcontents}
 
 \section{Introdução}
-\subsection{Motivação e Objetivos}
+\subsection{Motivação}
 \begin{frame}{}
-	\begin{block}{\textbf{\textsc{INTRODUÇÃO: Motivação}}}s
+	\begin{block}{\textbf{\textsc{MOTIVAÇÃO}}}
+	\justifying
+	\setlength{\parindent}{1cm}
 	Com a miniaturização dos circuitos eletrônicos e desenvolvimento de dispositivos cada vez mais compactos, técnicas tradicionais de troca térmica por convecção forçada não são mais suportadas. Alternativas apontam para cavidades ou caminhos com material de alta condutibilidade.
 	\end{block}
 \end{frame}
+\subsection{Objetivos}
 \begin{frame}{}
-	\begin{block}{\textbf{\textsc{INTRODUÇÃO: Objetivos}}}
+	\begin{block}{\textbf{\textsc{OBJETIVOS}}}
+	\justifying
+	\setlength{\parindent}{1cm}
 		\begin{itemize}
 		\item Otimizar parcialmente uma cavidade em forma de Duplo-T;
 		\item Comparar os resultados de duas meta-heurísticas aplicadas ao problema
@@ -158,7 +163,9 @@ A. J. Silva Neto}
 
 \subsection{Breve Estado da Arte}
 	\begin{frame}{}
-	\begin{block}{\textbf{\textsc{INTRODUÇÃO: Breve Estado da Arte}}}
+	\begin{block}{\textbf{\textsc{BREVE ESTADO DA ARTE}}}	
+\justifying
+	\setlength{\parindent}{1cm}
 		\begin{itemize}
 		\item Cavidade em formato de "C" e "T"  em Biserni et. al. (2004). 
 		\item Cavidade em forma de "H"  em Biserni et. al.(2007).
@@ -171,16 +178,32 @@ A. J. Silva Neto}
 \end{frame}
 
 \section{Modelagem Matemática e Numérica}
+
+\begin{frame}[plain]
+\begin{block}{\textbf{MODELAGEM MATEMÁTICA E NUMÉRICA}}
+\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{../../imgs/duplo_t.png}
+			\caption{ {\small Domínio Computacional da Cavidade em Forma de Duplo-T.}}
+			\label{figure01}
+		\end{figure}
+\end{block}
+\end{frame}
+
+
 \begin{frame}{}
 \begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
+\justifying
+	\setlength{\parindent}{1cm}
 		\textbf{Hipóteses Simplificativas:}
+		\small
 		\begin{enumerate}
 			\item Regime Permanente
 			\item Geração uniforme de calor
 			\item Condutividade térmica constante
 			\item Domínio bidimensional
 		\end{enumerate}
-	
+		\normalsize
 		\begin{equation}
 		\frac{\partial}{\partial x}\left( k\frac{\partial \theta}{\partial x}\right)+
 		\frac{\partial}{\partial y}\left(k\frac{\partial \theta}{\partial y}\right)+
@@ -192,16 +215,7 @@ A. J. Silva Neto}
 		\end{equation}
 	\end{block} 
 \end{frame}
-\begin{frame}[plain]
-\begin{block}{\textbf{MODELAGEM MATEMÁTICA}}
-\begin{figure}[h!]
-			\centering
-			\includegraphics[width=0.9\linewidth]{../../imgs/duplo_t.png}
-			\caption{ {\small Domínio Computacional da Cavidade em Forma de Duplo-T.}}
-			\label{figure01}
-		\end{figure}
-\end{block}
-\end{frame}
+
 \begin{frame}{}
 	\begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
 	\textbf{Restrições: }
@@ -216,11 +230,12 @@ A. J. Silva Neto}
 		
 	\end{block} 
 \end{frame}
+
+
 \begin{frame}
-%%\begin{block}{\textbf{\textsc{Modelagem Matemática e Numérica}}}
+\begin{varblock}[11.5cm]{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}\justifying
+	\setlength{\parindent}{1cm}
 \textbf{Adimensionalização do Problema:}
-\begin{equation}
-		\end{equation}
 		\begin{equation}
 				\tilde{x},\tilde{y},\tilde{H}_{0},\tilde{H}_{1},\tilde{H}_{2},\tilde{L}_{0},\tilde{L}_{1},\tilde{L}_{2},\tilde{H},\tilde{L},\tilde{S}_{1} = \frac{x,y,H_{0},H_{1},H_{2},L_{0},L_{1},L_{2},H,L,S_{1}}{A^{1/2}}\label{vadim} 
 		\end{equation}
@@ -230,7 +245,7 @@ A. J. Silva Neto}
 		\begin{equation}
 			\tilde{\theta}_{max}=\frac{\theta_{max}-\theta_{min}}{q^{'''}\cdot\frac{A}{k}}\label{fo}
 		\end{equation}
-		%%\end{block}
+		\end{varblock}
 \end{frame}
 \begin{frame}
 \begin{block}{\textbf{\textsc{MODELAGEM MATEMÁTICA E NUMÉRICA}}}
@@ -281,9 +296,10 @@ A. J. Silva Neto}
 		\setlength{\parindent}{1cm}
 		\begin{itemize}
 \item Durante o processo de otimização, foram mantidos constantes os valores das restrições ($\phi_c = 0.1,  \phi_1 = \phi_2 = 0.015$) 
-\item O grau de liberdade $H/L$ foi variado entre $0.3 =< H/L<= 30$
-			\item Foram variados os graus de liberdade: $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ e $S_{1}/H_{0}$.
-
+\item Para a otimização de 3 Gls  o grau de liberdade $H_{0}/L_{0}$ foi variado entre $0 =< H_{0}/L_{0}<= 25$;
+\item Sendo otimizados os graus de liberdade: $H_{2}/L_{2}$, $H_{1}/L_{1}$ e $S_{1}/H_{0}$;
+\item Para a otimização de 4 GLs, o grau de liberdade $H/L$ foi variado entre $0.3 =< H/L<= 30$;
+			\item Sendo otimizados os graus de liberdade: $H_{0}/L_{0}$, $H_{1}/L_{1}$, $H_{2}/L_{2}$ e $S_{1}/H_{0}$;
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -342,19 +358,22 @@ A. J. Silva Neto}
 
 \section{Resultados}
 
-\begin{frame}
+%\begin{frame}
+%\begin{block}{\textbf{\textsc{RESULTADOS}}}
+%\justifying
+%		\setlength{\parindent}{1cm}
+%\justifying
+%		\setlength{\parindent}{1cm}
+%\begin{itemize}
+%			\item Primeiramente serão apresentados os resultados da otimização de 3 GLs, com o efeito de $H_{0}/L_{0}$ sobre a geometria ótima ($(H_{2}/L_{2})_{3 \times o}$, $(H_{1}/L_{1})_{2\times o}$ e $(S_{1}/H_{0})_{o}$) e temperatura máxima em excesso três vezes minimizada $(\tilde{\theta}_{max})_{3\times m}$.
+%			\item Foram investigados valores de  $H_{0}/L_{0}$ no intervalo de 0 a 25, onde para cada valor foram executadas 30 rodadas de cada algoritmo.
+%			
+%		\end{itemize}
+%\end{block}
+%\end{frame}
 
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
-
-\justifying
-		\setlength{\parindent}{1cm}
-Primeiramente serão apresentados os resultados da otimização de 4 GLs, com o efeito de h0/l0 sobre a geometria ótima (h1/l1,h2/l2 e s1/h0) e temperatura máxima em excesso três vezes minimizada (tmax)3m.
-Foram investigados valores de  h0/l0 no intervalo de 0 a 25, onde para cada valor foram executadas 30 rodadas de cada algoritmo.
-\end{block}
-
-\end{frame}
 \begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{block}{\textbf{\textsc{PRINCIPAIS RESULTADOS}}}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-tmin.png}
@@ -365,7 +384,7 @@ Foram investigados valores de  h0/l0 no intervalo de 0 a 25, onde para cada valo
 \end{frame}
 
 \begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{block}{\textbf{\textsc{PRINCIPAIS RESULTADOS}}}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
@@ -375,79 +394,175 @@ Foram investigados valores de  h0/l0 no intervalo de 0 a 25, onde para cada valo
 \end{block}
 \end{frame}
 
+
+%\begin{frame}[plain]
+%\begin{block}{\textbf{\textsc{RESULTADOS}}}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h1l1.png}
+%\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{1}/L_{1})_{2\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+%\label{figure04}
+%\end{figure}
+%\end{block}
+%\end{frame}
+
+
+%
+%\begin{frame}[plain]
+%\begin{block}{\textbf{\textsc{RESULTADOS}}}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0_s1h0.png}
+%\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(S_{1}/H_{0})_{o}$ obtidos por cada versão dos algoritmos DE e SA.}}
+%\label{figure05}
+%\end{figure}
+%\end{block}
+%\end{frame}
+
+%\begin{frame}
+%\begin{block}{\textbf{\textsc{RESULTADOS}}}
+%\justifying
+%		\setlength{\parindent}{1cm}
+%\begin{itemize}
+%			\item A seguir serão apresentados os resultados para a otimização de 4 Gls para diferentes valores de $H/L$.
+%			\item O grau de liberdade $H/L$ foi variado entre os valores 0.3 a 30.
+%			
+%		\end{itemize}
+%\end{block}
+%\end{frame}
+
 \begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{varblock}[11.5cm]{\textbf{\textsc{PRINCIPAIS RESULTADOS}}}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
-\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
-\label{figure03}
+\includegraphics[width=1.01\linewidth]{../../imgs/5dof/de_sa_hl_tmin.png}
+\caption{ {\small Efeito de $H/L$ sobre $(\tilde{\theta}_{max})_{3\times m}$ obtidos por cada versão dos algoritmos DE e SA: a) DE b) SA}}
+\label{figure06}
 \end{figure}
-\end{block}
+\end{varblock}
+\end{frame}
+
+%\begin{frame}[plain]
+%\begin{varblock}[11.5cm]{\textbf{\textsc{RESULTADOS}}}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=1.01\linewidth]{../../imgs/5dof/de_sa_hl_h0l0.png}
+%\caption{ {\small Efeito de $H/L$ sobre $(H_{0}/L_{0})_{4\times o}$ obtidos por cada versão dos algoritmos DE e SA: a) DE b) SA}}
+%\label{figure07}
+%\end{figure}
+%\end{varblock}
+%\end{frame}
+
+\begin{frame}[plain]
+\begin{varblock}[11.5cm]{\textbf{\textsc{PRINCIPAIS RESULTADOS}}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.01\linewidth]{../../imgs/5dof/de_sa_hl_h2l2.png}
+\caption{ {\small Efeito de $H/L$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA: a) DE b) SA}}
+\label{figure08}
+\end{figure}
+\end{varblock}
 \end{frame}
 
 \begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
+\begin{varblock}[11.5cm]{\textbf{\textsc{PRINCIPAIS RESULTADOS}}}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h2l2.png}
-\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{2}/L_{2})_{3\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
-\label{figure03}
+\includegraphics[width=1.01\linewidth]{../../imgs/5dof/de_sa_hl_h1l1.png}
+\caption{ {\small Efeito de $H/L$ sobre $(H_{1}/L_{1})_{2\times o}$ obtidos por cada versão dos algoritmos DE e SA: a) DE b) SA}}
+\label{figure11}
 \end{figure}
-\end{block}
+\end{varblock}
 \end{frame}
 
-\begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0-h1l1.png}
-\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(H_{1}/L_{2})_{2\times o}$ obtidos por cada versão dos algoritmos DE e SA.}}
-\label{figure03}
-\end{figure}
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}[plain]
-\begin{block}{\textbf{\textsc{RESULTADOS}}}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.65\linewidth]{../../imgs/4dof/h0l0_s1h0.png}
-\caption{ {\small Efeito de $H_{0}/L_{0}$ sobre $(S_{1}/H_{0})_{o}$ obtidos por cada versão dos algoritmos DE e SA.}}
-\label{figure03}
-\end{figure}
-\end{block}
-\end{frame}
+%\begin{frame}[plain]
+%\begin{varblock}[11.5cm]{\textbf{\textsc{RESULTADOS}}}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=1.01\linewidth]{../../imgs/5dof/de_sa_hl_s1h0.png}
+%\caption{ {\small Efeito de $H/L$ sobre $(S_{1}/H_{0})_{o}$ obtidos por cada versão dos algoritmos DE e SA: a) DE b) SA}}
+%\label{figure12}
+%\end{figure}
+%\end{varblock}
+%\end{frame}
 
 \section{Conclusão}
 
+%\begin{frame}
+%\begin{block}{\textbf{\textsc{CONCLUSÃO}}}
+%\justifying
+%		\setlength{\parindent}{1cm}
+%		\begin{itemize}
+%			\item O trabalho analisou os resultados de duas meta-heurísticas aplicadas a otimização geometrica em um problema de transferência de calor. 
+%			\item O objetivo principal é encontrar o algoritmo com os melhores resultados para a reprodução do efeito dos graus de liberdade sobre a geometria ótima e a performance térmica do problema
+%			\item Foi observado que a meta-heurística empregada pode levar a interpretações erradas em relação a influência de um grau de liberdade sobre a configuração ótima. Reproduzindo curvas de efeito imprecisas.
+%			
+%		\end{itemize}
+%\end{block}
+%\end{frame}
+
 \begin{frame}
-
-\begin{block}{Conclusão}
-Conclusão...
+\begin{block}{\textbf{\textsc{CONCLUSÃO}}}
+\justifying
+		\setlength{\parindent}{1cm}
+		\begin{itemize}
+			\item Dentre os algoritmos pesquisados e as configurações de parâmetros avaliadas, todas as versões do SA apresentaram um desempenho inferior as versões do DE.
+			\item O DE foi o que apresentou, em geral, melhor desempenho. Principalmente as versões DE1 e DE4, com os parâmetros de cruzamento de 0.9 e fator de amplificação de 1.5;
+			\item Portanto, para o problema de interesse, esses são os parâmetros recomendados para o algoritmo DE, pois foram aqueles que reproduziram de maneira mais precia as curvas de efeito dos graus de liberdade sobre a geometria ótima e peformance térmica do problema. 
+		\end{itemize}
 \end{block}
-
 \end{frame}
 
 \section{Referências}
 
 \begin{frame}
 
-\begin{block}{Referências}
-\end{block}
+\begin{block}{\textbf{\textsc{REFERÊNCIAS}}}
+\begin{thebibliography}{99}
+\fontsize{8}{0}\selectfont
 
+\bibitem[Bejan, 1996]{Bejan}
+A. Bejan, Constructal-theory Network of Conducting Path for Cooling a Heat Generating Volume. {\it Int. J. Heat Mass Transfer}, vol. 40, n. 4, pp.799-816, 1996.
+
+\bibitem[Biserni et al., 20104]{Biserni1}
+C. Biserni, L. A. O. Rocha, A. Bejan, Inverted Fins: Geometric Optimization of the Intrusion Into a Conducting Wall. {\it Int. J. Heat and Mass Transfer}, 47, pp. 2577-2586, 2004.
+
+\bibitem[Gonzales et al., 2015]{Gonzales2}
+G. V. Gonzales, E. D. Dos Santos, L. A. Isoldi, E. da S. D. Estrada,L. A. O. Rocha, Constructal Design of Isothermal Double-T Shaped Cavity By Means of Simulated Annealing. In {\it Proceedings of the XXXVI Iberian Latin-American Congress on Computational Methods in Engineering}, Rio de Janeiro, RJ, Brazil, 2015.
+
+\bibitem[Kirkpatrick et al.,1983]{Kirk}
+S. Kirkpatrick, C. D. Gelatt, M. P. Vecchi, M. P., Optimization by Simulated Annealing. {\it Science}, New Series., v. 220, No 4598, pp 671-680, 1983.
+\end{thebibliography}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{\textbf{\textsc{REFERÊNCIAS}}}
+\begin{thebibliography}{99}
+\fontsize{8}{0}\selectfont
+
+\bibitem[Lorenzini et al., 2014]{Lorenzini4}
+G. Lorenzini, C. Biserni, E. da S. D. Estrada, E. D. Dos Santos, L. A. Isoldi, L. A. O. Rocha, Genetic Algorithm Applied to Geometric Optimization of Isothermal Y-Shaped Cavities. {\it Journal of Electronic Packaging }, vol 136, p. 031011-031011-9, 2014.
+
+\bibitem[Metropolis et al.,1953]{Metropolis}
+N. Metropolis, A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller, E. Teller, Equation of State Calculations by Fast Computing Machines. {\it The Journal of Chemical Physics.}, v 21, p 1088-1092, 1953.
+
+\bibitem[Storn and Price., 1997]{Storn}
+R. Storn, K. Price, Differential Evolution - A Simple and Efficient Heuristic for Global Optimization over Continuous Spaces. {\it Journal of Global Optimization.}, v 11, p 341-359, 1997.
+
+\end{thebibliography}
+\end{block}
 \end{frame}
 
 \section{Agradecimentos}
-
 \begin{frame}
-
-\begin{block}{Agradecimentos}
-Agradecimentos...
+\begin{block}{\textbf{\textsc{AGRADECIMENTOS}}}
+\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.8\linewidth]{../../imgs/agrade.png}
+			\label{figure01}
+	\end{figure}
 \end{block}
-
 \end{frame}
 
 \end{document}
